@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: xmpp
+  name: xmpp-5280
+spec:
+  ports:
+  - name: 5280-5280
+    port: 5280
+    protocol: TCP
+    targetPort: 5280
+  selector:
+    app: xmpp
+  type: NodePort
+status:
+  loadBalancer: {}

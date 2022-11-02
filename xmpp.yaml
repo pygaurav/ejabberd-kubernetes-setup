@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: xmpp
+  name: xmpp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xmpp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: xmpp
+    spec:
+      containers:
+      - image: ejabberd/ecs
+        name: ecs
+        resources: {}
+status: {}
