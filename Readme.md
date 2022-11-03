@@ -39,6 +39,11 @@ In this case port of 5280 become **30501** on your machine.
 
 ---
 
+## To Register a User Execute this command:
+
+`kubectl exec -it <POD_NAME> -- bin/ejabberdctl register <USER> <SERVER:localhost> <PASSWORD>`
+
+---
 **Bonus Note:** Don't forget to change this port on the nodejs code ;).
 
 
